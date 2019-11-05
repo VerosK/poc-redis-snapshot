@@ -1,5 +1,11 @@
 # Redis dump & restore
 
+## Requirements
+
+- docker
+- docker-compose
+- netcat
+
 ## Usage
 
 1. start Redis container (`ddocker-compose up`)
