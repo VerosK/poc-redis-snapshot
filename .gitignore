@@ -1,0 +1,4 @@
+data
+redis-dump-go
+*.csv
+*.zip
