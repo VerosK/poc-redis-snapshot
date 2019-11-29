@@ -34,3 +34,4 @@ uid=100(redis) gid=101(redis) groups=101(redis),101(redis)
 
 - Prometheus: http://localhost:9090/
 - Redis exporter: http://localhost:9121/metrics/
+- Alertmanager: http://localhost:9093/
