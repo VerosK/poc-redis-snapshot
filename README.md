@@ -29,3 +29,8 @@ uid=100(redis) gid=101(redis) groups=101(redis),101(redis)
 /data # ls -la dump.rdb 
 -rw-r--r--    1 redis    redis      1635910 Nov  5 18:09 dump.rdb
 ```
+
+## Prometheus
+
+- Prometheus: http://localhost:9090/
+- Redis exporter: http://localhost:9121/metrics/

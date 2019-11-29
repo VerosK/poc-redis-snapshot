@@ -1,4 +1,7 @@
 version: '2.2'
+networks:
+  promnet:
+    driver: bridge
 services:
   redis:
     image: redis:3.2.11-alpine
@@ -7,3 +10,20 @@ services:
       - ./data:/data
     ports:
       - 6379:6379
+    networks:
+      - promnet
+  exporter:
+    image: oliver006/redis_exporter
+    command: ['-redis.addr', 'redis://redis:6379']
+    ports:
+      - 9121:9121
+    networks:
+      - promnet
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090
+    networks:
+      - promnet
